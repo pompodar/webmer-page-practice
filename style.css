@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1920px;
+    background-color: #121112;
+    height: 980px;
+    position: relative;
+    overflow: hidden;
+}
+
+.planet {
+    content: '';
+    width: 384px;
+    height: 336px;
+    border-radius: 50%;
+    position: absolute;
+    right: -170px;
+    top: -120px;
+    background: #FFFFFF;
+}
+
+@media screen and (max-width: 400px) {
+    .planet {
+        width: 325px;
+        height: 296px;
+    }
+}
+
+.satelite {
+    position: absolute;
+    right: 12%;
+    top: 14%;
+    width: 40px;;
+    height: 40px;
+    border-radius: 50%;
+    background: #F26322;
+}
+
+@media screen and (max-width: 1680px) {
+    .satelite {
+        right: 16%;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .satelite {
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .satelite {
+        right: 24%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .satelite {
+        right: 30%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .satelite {
+        right: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .satelite {
+        right: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .satelite {
+        right: 40%;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.container {
+    max-width: 89.6%; /* questioned */
+    margin: 0 auto;
+}
+
+header {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo svg {
+    fill: #ffffff;
+    display: flex;
+    position: relative;
+    top: -50px;
+    transform: scale(2);
+}
+
+@media screen and (max-width: 1024px) {
+    header .logo svg {
+        padding-left: 24px;
+        transform: scale(3);
+    }
+}
+
+header menu {
+    display: flex;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 200px;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    header ul {
+        display: none;
+    }
+}
+
+header ul li a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-decoration: none;
+    color: white;
+}
+
+header ul li:not(:last-child) {
+    padding-right: 40px;
+}
+
+header ul li a:hover ~ div {
+    background-color: white;
+}
+
+header ul li div {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+.menu-mobile {
+    color: #121112;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu-mobile svg {
+    display: inline-block;
+    fill: #121112;
+    height: 15px;
+    transition: fill 1s;
+}
