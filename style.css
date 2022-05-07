@@ -25,6 +25,10 @@ img {
     right: -170px;
     top: -120px;
     background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 1s, width 1s, top 1s, right 1s, border-radius 0.5s;
 }
 
 @media screen and (max-width: 400px) {
@@ -32,6 +36,35 @@ img {
         width: 325px;
         height: 296px;
     }
+}
+
+.full-screen {
+    width: 150vw;
+    height: 150vh;
+    right: -25vw;
+    top: -25vh;
+    border-radius: 0;
+    transition: height 1s, width 1s, top 1s, right 1s, border-radius 2s;
+}
+
+.planet menu {
+    width: 0;
+    overflow: hidden;
+    transition: all 3s;
+}
+
+.planet menu a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-decoration: none;
+    color: black;
+}
+
+.planet .width-auto {
+    width: auto;
 }
 
 .satelite {
@@ -165,6 +198,13 @@ header ul li div {
     color: #121112;
     z-index: 1;
     cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-mobile {
+        display: block;
+    }
 }
 
 .menu-mobile svg {
@@ -172,4 +212,16 @@ header ul li div {
     fill: #121112;
     height: 15px;
     transition: fill 1s;
+}
+
+.menu-open {
+    width: 0;
+}
+
+.menu-width-auto {
+    width: auto;
+}
+
+.menu-width-none {
+    width: 0;
 }
